@@ -5,8 +5,6 @@ var UI = function(){
   entries.all(function(result){
     this.render(result);
   }.bind(this));
-
-  this.showAllEntries();
 }
 
 UI.prototype = {

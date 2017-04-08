@@ -71,8 +71,6 @@
 	  entries.all(function(result){
 	    this.render(result);
 	  }.bind(this));
-	
-	  this.showAllEntries();
 	}
 	
 	UI.prototype = {
@@ -142,7 +140,7 @@
 	    request.send();
 	  },
 	  all: function(callback){
-	    this.makeRequest("http://localhost:3000/journal", function(){
+	    this.makeRequest("http://localhost:3000/journal/data", function(){
 	      if(this.status !==200) return;
 	      var jsonString = this.responseText;
 	      var results = JSON.parse(jsonString);
