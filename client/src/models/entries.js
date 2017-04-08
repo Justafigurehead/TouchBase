@@ -20,6 +20,14 @@ Entries.prototype = {
       var entries = Entries.prototype.populateEntries(results);
         callback(entries);
     });
+  },
+  populateEntries: function(results){
+    var entries = [];
+    results.forEach(function(result){
+      var entry = new Entry(result);
+      entries.push(entry);
+    });
+    return entries;
   }
 }
 
