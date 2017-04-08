@@ -10,6 +10,7 @@ JournalQuery.prototype = {
       var collection = db.collection('entries');
       collection.find().toArray(function(err, docs) {
         onQueryFinished(docs);
+        console.log('Hello from JournalQuery!');
       });
     });
   }
