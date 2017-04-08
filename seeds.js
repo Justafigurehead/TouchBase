@@ -1,3 +1,5 @@
+db.dropDatabase();
+
 use travel_journal;
 
 db.entries.insert([
