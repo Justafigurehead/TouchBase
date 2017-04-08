@@ -15,3 +15,5 @@ JournalQuery.prototype = {
   }
 };
 
+module.exports = JournalQuery;
+
