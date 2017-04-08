@@ -68,10 +68,12 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var UI = __webpack_require__(3);
 
 var app = function(){
-
+  new UI();
 };
 
 window.onload = app;
@@ -100,6 +102,12 @@ module.exports = config;
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /Users/user/Codeclan_work/projects/Project_3_Touchbase/TouchBase/client/src/views/ui.js Unexpected token (31:55)\nYou may need an appropriate loader to handle this file type.\n| \n|       var liEntryText = document.createElement('li');\n|       liEntryText.innerHtml = \"<p>\" + entry.entry_text \"</p>\";\n| \n|       ul.appendChild(liTitle);");
 
 /***/ })
 /******/ ]);
