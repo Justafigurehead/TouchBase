@@ -8,8 +8,12 @@
 <body>
   
   <h2>HELLO WORLD</h2>
-
-  Title:  <input type="text" id="journalEntryTitle"></input><br>
-  Entry:<input style="height:200px;" type="text" id="journalEntry">
+<form action="/journal" method="post">
+  <label for="journalEntryTitle">Title:</label>
+  <input type="text" id="journalEntryTitle" /><br>
+  <label for = journalEntry>Entry:</label>
+  <input style="height:200px;" type="text" id="journalEntry" />
+  <input type="submit" value="Save" />
+  </form>
 </body>
 </html>

@@ -28,6 +28,9 @@ Entries.prototype = {
       entries.push(entry);
     });
     return entries;
+  },
+  add: function(callback){
+    console.log("adding film");
   }
 }
 
