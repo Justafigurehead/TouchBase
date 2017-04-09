@@ -35,15 +35,33 @@ body {
 
 }
 
-/* Links */
-a:active {
 
+/* Nav links container for positioning*/
+
+#nav-link {
+  margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -3.0%;
+  margin-right:60px;
+  opacity:0.9;
 }
 
-a:hover {
 
+#nav-link a:link, a:active, a:visited {
+  text-decoration: none;
+  color: #FFF;
+  font-family: sans-serif;
+  font-size:1.2em;
+  text-transform: uppercase;
+  margin-right:30px;
+  letter-spacing: 1px;
 }
 
+#nav-link a:hover {
+  color: red;
+  transition: all 0.6s ease-in-out;
+}
 /*Buttons*/
 
 /* boxes */
