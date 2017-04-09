@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(3);
+	module.exports = __webpack_require__(5);
 
 
 /***/ },
@@ -56,7 +56,7 @@
 	
 	var app = function(){
 	  new UI();
-	};
+	}
 	
 	window.onload = app;
 
@@ -64,7 +64,7 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Entries = __webpack_require__(4);
+	var Entries = __webpack_require__(3);
 	
 	var UI = function(){
 	  var entries = new Entries();
@@ -107,26 +107,9 @@
 
 /***/ },
 /* 3 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(__dirname) {config = {
-	  entry: __dirname + "/src/app.js",
-	  output: {
-	    filename: "bundle.js",
-	    path: __dirname + "/build"
-	  },
-	  devtool: 'source-map'
-	}
-	
-	module.exports = config;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
-
-/***/ },
-/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Entry = __webpack_require__(5);
+	var Entry = __webpack_require__(4);
 	
 	var Entries = function(){
 	
@@ -162,7 +145,7 @@
 	module.exports = Entries;
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports) {
 
 	var Entry = function(options){
@@ -172,6 +155,23 @@
 	}
 	
 	module.exports = Entry;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(__dirname) {config = {
+	  entry: __dirname + "/src/app.js",
+	  output: {
+	    filename: "bundle.js",
+	    path: __dirname + "/build"
+	  },
+	  devtool: 'source-map'
+	}
+	
+	module.exports = config;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ }
 /******/ ]);
