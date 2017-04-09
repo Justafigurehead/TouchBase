@@ -11,7 +11,9 @@ html, body {
 /* Body Background pattern from Subtle Patterns */
 body {
   margin:0px;
-  background: url('../img/seamless_paper_texture.png') repeat;
+  background: url('../img/ryan-johnston-124209.jpg');
+  background-size: cover;
+  /*background: #490A3D;*/
 }
 
 
@@ -19,8 +21,8 @@ body {
   width: 100%;
   min-height: 12%;
   position: top;
-  background: steelblue;
-  opacity: 0.7;
+  background: #222;
+  opacity: 0.75;
 }
 
 /* Links */
