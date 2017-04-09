@@ -142,7 +142,9 @@
 	    return entries;
 	  },
 	  add: function(newEntry, callback){
-	    
+	    var entryToAdd = JSON.stringify(newEntry);
+	    console.log("NEW ENTRY", entryToAdd);
+	    this.makePostRequest("http://localhost:3000/journal/data", entryToAdd, callback)
 	    
 	  },
 	  makePostRequest: function(url, callback, payload){
