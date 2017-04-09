@@ -1,12 +1,10 @@
-var Entries = require('./models/entries');
+var Entries = require('../models/entries');
 
 var UI = function(){
   var entries = new Entries();
   entries.all(function(result){
     this.render(result);
   }.bind(this));
-
-  this.showAllEntries();
 }
 
 UI.prototype = {
@@ -28,7 +26,7 @@ UI.prototype = {
       liDate.innerHtml = "<em>" + entry.date + "</em>";
 
       var liEntryText = document.createElement('li');
-      liEntryText.innerHtml = "<p>" + entry.entry_text "</p>";
+      liEntryText.innerHtml = "<p>" + entry.entry_text + "</p>";
 
       ul.appendChild(liTitle);
       ul.appendChild(liDate);
@@ -36,9 +34,6 @@ UI.prototype = {
       div.appendChild(ul);
       container.appendChild(div);
     }
-  }, 
-  showAllEntries: function(){
-
   }
 }
 
