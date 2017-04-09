@@ -35,6 +35,6 @@ UI.prototype = {
       container.appendChild(div);
     }
   }
-}
+};
 
 module.exports = UI;
