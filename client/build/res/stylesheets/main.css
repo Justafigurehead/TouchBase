@@ -13,16 +13,21 @@ body {
   margin:0px;
   background: url('../img/ryan-johnston-124209.jpg');
   background-size: cover;
-  /*background: #490A3D;*/
 }
 
 
 #main-nav {
   width: 100%;
-  min-height: 12%;
+  height: 12%;
   position: top;
   background: #222;
   opacity: 0.75;
+}
+
+/*nav logo*/
+#touchbase-logo-small {
+  padding-top:1.25%;
+  margin-left: 2%;
 }
 
 /* Links */
@@ -35,3 +40,5 @@ a:hover {
 }
 
 /*Buttons*/
+
+/* boxes */
