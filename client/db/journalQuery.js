@@ -12,6 +12,18 @@ JournalQuery.prototype = {
         onQueryFinished(docs);
       });
     });
+  },
+  add: function(entryToAdd, onQueryFinished){
+    MongoClient.connect(this.url,function(err,db){
+      if(db){
+        var collection = db.collection('entries');
+        collection.insert(entryToAdd);
+        collection.find().toArray(function(err,docs){
+          console.log(docs);
+          onQueryFinished(docs);
+        })
+      }
+    })
   }
 };
 
