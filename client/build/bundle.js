@@ -175,18 +175,19 @@ UI.prototype = {
     for (var entry of entries){
       var div = document.createElement('div');
       div.setAttribute("id", "entry-" + id_number);
+      console.log(id_number);
       id_number++;
 
       var ul = document.createElement('ul');
 
       var liTitle = document.createElement('li');
-      liTitle.innerHtml = "<h2>" + entry.title + "</h2>";
-
+      liTitle.innerHTML = "<h2>" + entry.title + "</h2>";
+      console.log(liTitle)
       var liDate = document.createElement('li');
-      liDate.innerHtml = "<em>" + entry.date + "</em>";
+      liDate.innerHTML = "<em>" + entry.date + "</em>";
 
       var liEntryText = document.createElement('li');
-      liEntryText.innerHtml = "<p>" + entry.entry_text + "</p>";
+      liEntryText.innerHTML = "<p>" + entry.entry_text + "</p>";
 
       ul.appendChild(liTitle);
       ul.appendChild(liDate);
