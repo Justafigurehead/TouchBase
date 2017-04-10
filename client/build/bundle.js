@@ -69,7 +69,7 @@
 	      weather.getWeather(function(results){
 	        console.log(results);
 	      });
-	      // ui.displayWeather();
+	      // weatherUI.displayWeather();
 	      break;
 	  }
 	}
