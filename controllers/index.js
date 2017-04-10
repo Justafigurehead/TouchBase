@@ -3,6 +3,7 @@ var router = express.Router();
 var path = require('path');
 
 router.use('/journal', require('./journal'));
+router.use('/weather', require('./weather'));
 
 router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/../client/build/main.html'));
