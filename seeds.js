@@ -1,4 +1,4 @@
-db.dropDatabase();
+
 
 use travel_journal;
 
@@ -14,3 +14,4 @@ db.entries.insert([
     entry_text: "Today I will be visiting..."
   }
 ]);
+// db.dropDatabase();

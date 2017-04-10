@@ -1,5 +1,8 @@
+var Key = require('../../../key');
+
 var Weather = function() {
 
+   this.weatherKey = new Key();
 };
 
 Weather.prototype = {
@@ -10,12 +13,15 @@ Weather.prototype = {
     request.send();
   },
   getWeather: function(callback) {
-    this.makeRequest('http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/351581?res=daily&key=5ef36695-12a4-4ae8-8f3c-b7f96080cb5e', function() {
+    console.log(this.weatherKey.key);
+    var url = ('http://api.openweathermap.org/data/2.5/weather?q=Glasgow,uk&units=metric&APPID=' + this.weatherKey.key)
+    this.makeRequest(url, function() {
       if(this.status !== 200)
         return;
       var jsonString = this.responseText;
       var results = JSON.parse(jsonString);
       console.log(results);
+      callback(results);
     });
   }
 }
