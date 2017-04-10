@@ -1,12 +1,6 @@
 var Entries = require('../models/entries');
 
 var UI = function(){
-  var entries = new Entries();
-  entries.all(function(result){
-    this.render(result);
-  }.bind(this));
-
-  this.createForm();
 }
 
 UI.prototype = {
@@ -32,8 +26,14 @@ UI.prototype = {
       ul.appendChild(liDate);
       ul.appendChild(liEntryText);
       div.appendChild(ul);
-      // container.appendChild(div);
+      container.appendChild(div);
     }
+  },
+  showAllEntries:  function(){
+    var entries = new Entries();
+    entries.all(function(result){
+      this.render(result);
+    }.bind(this));
   },
   createForm: function(){
     var div = document.getElementById('entryForm');
@@ -61,8 +61,8 @@ UI.prototype = {
       console.log("Button Clicked")
       var newEntry = {
         title: e.target.title.value,
-        date: e.target.title.value,
-        entry_text: e.target.title.value
+        date: e.target.date.value,
+        entry_text: e.target.entry_text.value
       }
 
 
