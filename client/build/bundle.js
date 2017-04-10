@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(5);
+	module.exports = __webpack_require__(7);
 
 
 /***/ },
@@ -53,7 +53,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var UI = __webpack_require__(2);
-	var Weather = __webpack_require__(6);
+	var Weather = __webpack_require__(5);
 	
 	var app = function(){
 	  console.log(window.location.pathname);
@@ -230,26 +230,9 @@
 
 /***/ },
 /* 5 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(__dirname) {config = {
-	  entry: __dirname + "/src/app.js",
-	  output: {
-	    filename: "bundle.js",
-	    path: __dirname + "/build"
-	  },
-	  devtool: 'source-map'
-	}
-	
-	module.exports = config;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
-
-/***/ },
-/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Key = __webpack_require__(7);
+	var Key = __webpack_require__(6);
 	
 	var Weather = function() {
 	
@@ -282,7 +265,7 @@
 	module.exports = Weather;
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports) {
 
 	var Key = function() {
@@ -290,6 +273,23 @@
 	}
 	
 	module.exports = Key;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(__dirname) {config = {
+	  entry: __dirname + "/src/app.js",
+	  output: {
+	    filename: "bundle.js",
+	    path: __dirname + "/build"
+	  },
+	  devtool: 'source-map'
+	}
+	
+	module.exports = config;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ }
 /******/ ]);
