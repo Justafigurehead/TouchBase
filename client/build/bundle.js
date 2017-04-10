@@ -53,25 +53,22 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var UI = __webpack_require__(2);
-	var Weather = __webpack_require__(5);
+	var WeatherUI = __webpack_require__(8);
 	
 	var app = function(){
 	  console.log(window.location.pathname);
 	  var ui = new UI();
+	  var weatherUI = new WeatherUI();
 	
 	  switch(window.location.pathname){
 	    case '/journal':
-	      ui.showAllEntries();
-	      break;
+	    ui.showAllEntries();
+	    break;
 	    case '/':
-	      ui.createForm();
-	      var weather = new Weather();
-	      weather.getWeather(function(results){
-	        console.log(results);
-	      });
-	      // weatherUI.displayWeather();
-	      break;
-	  }
+	    ui.createForm();
+	    weatherUI.showAllWeather();
+	    break;
+	  };
 	}
 	
 	window.onload = app;
@@ -255,6 +252,7 @@
 	        return;
 	      var jsonString = this.responseText;
 	      var results = JSON.parse(jsonString);
+	      console.log(results);
 	      callback(results);
 	      // var weather = Weather.prototype.populateWeather(results);
 	      // callback(weather);
@@ -290,6 +288,58 @@
 	module.exports = config;
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Weather = __webpack_require__(5);
+	
+	var WeatherUI = function(){
+	
+	}
+	
+	WeatherUI.prototype = {
+	  weatherRender: function(weather){
+	    var container = document.getElementById('weatherInfo');
+	
+	    var div = document.createElement('div');
+	
+	    var ul = document.createElement('ul');
+	
+	    var liName = document.createElement('li');
+	    liName.innerHTML = "<p>" + weather.name + "</p>";
+	
+	    var liTemp = document.createElement('li');
+	    liTemp.innerHTML = "<p>" + weather.main.temp + "</p>"
+	
+	    var liWeatherDescription = document.createElement('li');
+	    liWeatherDescription.innerHTML = "<p>" + weather.weather[0].description + "</p>"
+	
+	    var imgIcon = document.createElement('img');
+	    imgIcon.src = 'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png';
+	
+	
+	    ul.appendChild(liName);
+	    ul.appendChild(liTemp);
+	    ul.appendChild(liWeatherDescription);
+	    ul.appendChild(imgIcon);
+	    div.appendChild(ul);
+	
+	    container.appendChild(div);
+	
+	    console.log(container);
+	
+	  },
+	  showAllWeather: function(){
+	    var weather = new Weather();
+	    weather.getWeather(function(result){
+	      this.weatherRender(result);
+	    }.bind(this));
+	  }
+	};
+	
+	module.exports = WeatherUI;
 
 /***/ }
 /******/ ]);

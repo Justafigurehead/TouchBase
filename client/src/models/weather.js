@@ -21,6 +21,7 @@ Weather.prototype = {
         return;
       var jsonString = this.responseText;
       var results = JSON.parse(jsonString);
+      console.log(results);
       callback(results);
       // var weather = Weather.prototype.populateWeather(results);
       // callback(weather);

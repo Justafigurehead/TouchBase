@@ -1,23 +1,20 @@
 var UI = require('./views/ui');
-var Weather = require('./models/weather');
+var WeatherUI = require('./views/weatherUI');
 
 var app = function(){
   console.log(window.location.pathname);
   var ui = new UI();
+  var weatherUI = new WeatherUI();
 
   switch(window.location.pathname){
     case '/journal':
-      ui.showAllEntries();
-      break;
+    ui.showAllEntries();
+    break;
     case '/':
-      ui.createForm();
-      var weather = new Weather();
-      weather.getWeather(function(results){
-        console.log(results);
-      });
-      // weatherUI.displayWeather();
-      break;
-  }
+    ui.createForm();
+    weatherUI.showAllWeather();
+    break;
+  };
 }
 
 window.onload = app;
