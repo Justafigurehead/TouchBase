@@ -63,14 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var UI = __webpack_require__(5);
+var UI = __webpack_require__(4);
 
 var app = function(){
   new UI();
@@ -99,15 +99,7 @@ module.exports = config;
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
-module.exports = __webpack_require__(1);
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Entry = __webpack_require__(4);
+var Entry = __webpack_require__(3);
 
 var Entries = function(){
 
@@ -143,7 +135,7 @@ Entries.prototype = {
 module.exports = Entries;
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 var Entry = function(options){
@@ -155,10 +147,10 @@ var Entry = function(options){
 module.exports = Entry;
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Entries = __webpack_require__(3);
+var Entries = __webpack_require__(2);
 
 var UI = function(){
   var entries = new Entries();
@@ -199,6 +191,14 @@ UI.prototype = {
 };
 
 module.exports = UI;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+module.exports = __webpack_require__(1);
+
 
 /***/ })
 /******/ ]);
