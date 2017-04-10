@@ -1,4 +1,5 @@
 var UI = require('./views/ui');
+var Weather = require('./models/weather');
 
 var app = function(){
   console.log(window.location.pathname);
@@ -10,7 +11,11 @@ var app = function(){
       break;
     case '/':
       ui.createForm();
-      ui.displayWeather();
+      var weather = new Weather();
+      weather.getWeather(function(results){
+        console.log(results);
+      });
+      // ui.displayWeather();
       break;
   }
 }

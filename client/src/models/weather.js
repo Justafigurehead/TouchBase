@@ -2,7 +2,7 @@ var Key = require('../../../key');
 
 var Weather = function() {
 
-var weatherKey = new Key();
+   this.weatherKey = new Key();
 
 };
 
@@ -14,15 +14,16 @@ Weather.prototype = {
     request.send();
   },
   getWeather: function(callback) {
-    var url = ('api.openweathermap.org/data/2.5/weather?q=Glasgow&APPID=' + weatherKey)
+    console.log(this.weatherKey.key);
+    var url = ('http://api.openweathermap.org/data/2.5/weather?q=Glasgow,uk&APPID=' + this.weatherKey.key)
     this.makeRequest(url, function() {
       if(this.status !== 200)
         return;
       var jsonString = this.responseText;
       var results = JSON.parse(jsonString);
-      
-      var weather = Weather.prototype.populateWeather(results);
-      callback(weather);
+      callback(results);
+      // var weather = Weather.prototype.populateWeather(results);
+      // callback(weather);
     });
   }
 }

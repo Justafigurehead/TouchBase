@@ -53,6 +53,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var UI = __webpack_require__(2);
+	var Weather = __webpack_require__(6);
 	
 	var app = function(){
 	  console.log(window.location.pathname);
@@ -64,7 +65,11 @@
 	      break;
 	    case '/':
 	      ui.createForm();
-	      ui.displayWeather();
+	      var weather = new Weather();
+	      weather.getWeather(function(results){
+	        console.log(results);
+	      });
+	      // ui.displayWeather();
 	      break;
 	  }
 	}
@@ -239,6 +244,52 @@
 	module.exports = config;
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Key = __webpack_require__(7);
+	
+	var Weather = function() {
+	
+	   this.weatherKey = new Key();
+	
+	};
+	
+	Weather.prototype = {
+	  makeRequest: function(url, callback) {
+	    var request = new XMLHttpRequest();
+	    request.open("GET", url);
+	    request.onload = callback;
+	    request.send();
+	  },
+	  getWeather: function(callback) {
+	    console.log(this.weatherKey.key);
+	    var url = ('http://api.openweathermap.org/data/2.5/weather?q=Glasgow,uk&APPID=' + this.weatherKey.key)
+	    this.makeRequest(url, function() {
+	      if(this.status !== 200)
+	        return;
+	      var jsonString = this.responseText;
+	      var results = JSON.parse(jsonString);
+	      callback(results);
+	      // var weather = Weather.prototype.populateWeather(results);
+	      // callback(weather);
+	    });
+	  }
+	}
+	
+	module.exports = Weather;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	var Key = function() {
+	  this.key = '926001eb0ee69e9d83122c9af97009be';
+	}
+	
+	module.exports = Key;
 
 /***/ }
 /******/ ]);
