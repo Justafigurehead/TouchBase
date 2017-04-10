@@ -1,5 +1,6 @@
 var Entries = require('../models/entries');
-
+var MapWrapper = require('../models/map');
+var GeoCoder = require('../models/geoCoder');
 var UI = function(){
 }
 
@@ -46,7 +47,9 @@ UI.prototype = {
     }
 
     div.appendChild(form);
-  }
+  },
+
+  
 };
 
 module.exports = UI;
