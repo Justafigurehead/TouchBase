@@ -16,6 +16,7 @@ var app = function(){
     case '/':
     ui.createForm();
     weatherUI.showAllWeather();
+    ui.displayMap();
     break;
   };
 }

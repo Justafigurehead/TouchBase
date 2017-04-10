@@ -70,3 +70,8 @@ body {
   margin-top: 10%;
   margin-left: 10%;
 }
+
+#home-map {
+  width: 500px;
+  height: 500px;
+}
