@@ -10,6 +10,7 @@ var app = function(){
       break;
     case '/':
       ui.createForm();
+      ui.displayWeather();
       break;
   }
 }
