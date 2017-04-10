@@ -19,7 +19,7 @@ journalRouter.get('/data', function(req, res){
   });
 });
 
-journalRouter.post('/', function(req, res){
+journalRouter.post('/data', function(req, res){
   var entry = new Entry({
     title: req.body.title,
     date: req.body.date,
@@ -27,7 +27,7 @@ journalRouter.post('/', function(req, res){
   });
   query.add(entry, function(results){
     res.json(results);
-  })
-})
+  });
+});
 
 module.exports = journalRouter;
