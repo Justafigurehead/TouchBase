@@ -28,7 +28,22 @@ Entries.prototype = {
       entries.push(entry);
     });
     return entries;
+  },
+  add: function(newEntry, callback){
+    debugger;
+    var entryToAdd = JSON.stringify(newEntry);
+    console.log("NEW ENTRY", entryToAdd);
+    this.makePostRequest("http://localhost:3000/journal/data", callback, entryToAdd)
+    
+  },
+  makePostRequest: function(url, callback, payload){
+    var request = new XMLHttpRequest();
+    request.open("POST", url);
+    request.setRequestHeader("Content-type", "application/json");
+    request.onload = callback;
+    console.log(payload);
+    request.send(payload);
   }
-}
+};
 
 module.exports = Entries;

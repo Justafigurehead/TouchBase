@@ -1,7 +1,17 @@
 var UI = require('./views/ui');
 
 var app = function(){
-  new UI();
+  console.log(window.location.pathname);
+  var ui = new UI();
+
+  switch(window.location.pathname){
+    case '/journal':
+      ui.showAllEntries();
+      break;
+    case '/':
+      ui.createForm();
+      break;
+  }
 }
 
 window.onload = app;
