@@ -47,9 +47,9 @@ UI.prototype = {
     }
 
     div.appendChild(form);
-  },
+  }
 
-  
+
 };
 
 module.exports = UI;

@@ -15,7 +15,7 @@ GeoCoder.prototype = {
       geoCoderThis.mapWrapper.googleMap.setCenter(coords);
     });
   }, 
-  makeRequest = function(url, callback){
+  makeRequest: function(url, callback){
     var xhr = new XMLHttpRequest();
     xhr.onload = callback;
     xhr.open("GET", url);
