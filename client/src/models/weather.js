@@ -15,7 +15,7 @@ Weather.prototype = {
   },
   getWeather: function(callback) {
     console.log(this.weatherKey.key);
-    var url = ('http://api.openweathermap.org/data/2.5/weather?q=Glasgow,uk&APPID=' + this.weatherKey.key)
+    var url = ('http://api.openweathermap.org/data/2.5/weather?q=Glasgow,uk&units=metric&APPID=' + this.weatherKey.key)
     this.makeRequest(url, function() {
       if(this.status !== 200)
         return;
