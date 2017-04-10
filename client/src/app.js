@@ -7,18 +7,12 @@ var app = function(){
   var ui = new UI();
   var journalUI = new JournalUI();
   var weatherUI = new WeatherUI();
-  
+
 
   switch(window.location.pathname){
     case '/journal':
       journalUI.showAllEntries();
       break;
-
-  switch(window.location.pathname){
-    case '/journal':
-    ui.showAllEntries();
-    break;
->>>>>>> feature/weather
     case '/':
     ui.createForm();
     weatherUI.showAllWeather();
