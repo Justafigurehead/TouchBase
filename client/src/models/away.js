@@ -17,12 +17,14 @@ Away.prototype = {
       if(this.status !== 200) return;
       var jsonString = this.responseText; 
       var results = JSON.parse(jsonString);
-      var away = away.prototype.populateCountries(results);
+      var away = away.prototype.populateCountriesDropDown(results);
       callback(away);
 
     });
     
   },
 
-
+  populateCountriesDropDown: function (away){
+    
+  }
 }
