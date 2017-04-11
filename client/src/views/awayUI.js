@@ -5,9 +5,12 @@ var AwayUI = function(){
 
 AwayUI.prototype = {
 render: function(away){
-  var container = document.getElementById('away');
-  var 
+  var dropdown = document.getElementById('away-dropdown');
+  for( var countries of away){
+    var option = document.createElement('option');
 
+   
+  }
 
 }
 
