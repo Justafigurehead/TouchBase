@@ -66,10 +66,32 @@ body {
 
 /* boxes */
 
+/*map styling*/
+
 #home-map {
-  width: 275px;
-  height: 275px;
-  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+#map-container {
+  background: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px 30px;
+  padding: 10px 10px 25px 10px;
+  text-align: center;
+  text-decoration: none;
+  position:relative;
+}
+
+#address {
+
+}
+
+#mapSearchBtn {
+  
 }
 
 #body-content-container {
@@ -95,6 +117,4 @@ body {
   justify-content: center;
 }
 
-#map-container {
 
-}
