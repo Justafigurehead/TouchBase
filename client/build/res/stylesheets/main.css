@@ -93,3 +93,12 @@ body {
   flex: 1;
   justify-content: center;
 }
+
+
+/* INPUT BOXES */
+.box {
+  width: 80%;
+  height:90%;
+  padding:10px;
+  background-color: #FFF;
+}

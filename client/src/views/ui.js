@@ -10,10 +10,12 @@ UI.prototype = {
 
     var titleInput = document.createElement('input');
     titleInput.setAttribute("name", "title");
+    titleInput.setAttribute("id", "title");
     form.appendChild(titleInput);
 
     var entryTextInput = document.createElement('input');
     entryTextInput.setAttribute("name", "entry_text");
+    entryTextInput.setAttribute("id", "entry_text");
     form.appendChild(entryTextInput);
 
     var button = document.createElement("button");
