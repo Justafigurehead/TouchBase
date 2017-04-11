@@ -1,6 +1,7 @@
 var UI = require('./views/ui');
 var JournalUI = require('./views/journalUI');
 var WeatherUI = require('./views/weatherUI');
+var AwayUI = require('./views/awayUi');
 
 var app = function(){
   console.log(window.location.pathname);
@@ -16,6 +17,9 @@ var app = function(){
     case '/':
     ui.createForm();
     weatherUI.showAllWeather();
+    case '/away':
+    away.makeRequest();
+    awayUI.showCountries();
     break;
   };
 }

@@ -20,6 +20,10 @@ Away.prototype = {
       var countryInfo = results[0];
       var away = away.prototype.createCountriesArray(results);
       callback(away);
+      console.log(jsonString);
+      console.log(results);
+      console.log(countryInfo);
+      console.log(away);
     });
     
 
