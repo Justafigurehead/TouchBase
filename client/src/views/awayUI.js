@@ -2,7 +2,7 @@ var Away = require('../models/away');
 
 var AwayUI = function(){
 
-}
+};
 
 AwayUI.prototype = {
   render: function(away){
@@ -12,14 +12,15 @@ AwayUI.prototype = {
       option.innerText = country.name;
       dropdown.appendChild(option);
 
-    }
+    };
     dropdown.addEventListener("change", function () {
       var value = document.getElementById("away-dropdown").value;
       var country = new Away();
-      country.selectedCountry(value, this.populateUl);
+      country.all(value, this.populateUl);
     });
 
   },
+
 
   populateUl: function(countryInfo){v
     var div = document.getElementById('away');
