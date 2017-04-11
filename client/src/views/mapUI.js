@@ -16,6 +16,13 @@ MapUI.prototype = {
     var mainMap = new MapWrapper(container, center, zoom);
 
     mainMap.addMarker(center);
+  },
+  var handleBtnClick = function(mainMap){
+    var input = document.querySelector('#address');
+    var address = input.value;
+
+    var gc = new GeoCoder(address, mainMap);
+    gc.geoCode();
   }
 };
 
