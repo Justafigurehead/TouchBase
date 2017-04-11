@@ -1,32 +1,36 @@
 var Away = function(){
-
 };
-
 Away.prototype = {
-
-  makeRequest: function(url,callback){
+  makeRequest: function(url, callback, onComplete){
     var request = new XMLHttpRequest();
     request.open("GET", url);
-    request.onload = callback;
+    request.onload = function() {
+      onComplete(request, callback)
+    };
     request.send();
   },
-  all:function (selected, callback) {
-    var url = "https://restcountries.eu/rest/v2/" + selected;
+  
+  requestDone: function(response, callback) {
+    console.log("Request Done callback fired");
+    console.log("Response status: " + response.status);
+    if (response.status !== 200) return;
+    console.log("Status was 200");
+    var jsonString = response.responseText;
+    var results = JSON.parse(jsonString);
+    var countryInfo = results[0];
+    console.log(jsonString);
+    console.log(results);
+    console.log(countryInfo);
+    console.log(away);
+    callback(results);
+    },
 
-    this.makeRequest(url,function(){
-      if(this.status !== 200) return;
-      var jsonString = this.responseText; 
-      var results = JSON.parse(jsonString);
-      var countryInfo = results[0];
-      var away = away.prototype.createCountriesArray(results);
-      callback(away);
-      console.log(jsonString);
-      console.log(results);
-      console.log(countryInfo);
-      console.log(away);
-    });
-  },
+    all: function(callback) {
+        console.log("away get all called");
+        var url = "https://restcountries.eu/rest/v2/all";
+        this.makeRequest(url, callback, this.requestDone);
 
+    },
   createCountriesArray: function(results){
     var countries = [];
     for(var results of results){
@@ -35,8 +39,6 @@ Away.prototype = {
     };
     return countries;
   }
-
 }
-
 module.exports = Away;
 

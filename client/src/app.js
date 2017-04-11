@@ -9,7 +9,7 @@ var app = function(){
   var ui = new UI();
   var journalUI = new JournalUI();
   var weatherUI = new WeatherUI();
-  var awayUI = new awayUI();
+  var awayUI = new AwayUI();
 
 
   switch(window.location.pathname){
@@ -21,7 +21,6 @@ var app = function(){
       weatherUI.showAllWeather();
     break;
     case '/away':
-      away.makeRequest();
       awayUI.showCountries();
     break;
   };
