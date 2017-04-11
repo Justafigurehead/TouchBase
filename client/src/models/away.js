@@ -22,9 +22,7 @@ Away.prototype = {
 
     });
     
-  },
-
-  populateCountriesDropDown: function (away){
+  }
     
   }
-}
+

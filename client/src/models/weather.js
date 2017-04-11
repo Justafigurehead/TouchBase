@@ -1,4 +1,4 @@
-var Key = require('../../../key');
+var Key = require('../../../../key');
 
 var Weather = function() {
 
