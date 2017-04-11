@@ -69,21 +69,23 @@ body {
 /*map styling*/
 
 #home-map {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
 }
 
 #map-container {
   background: white;
-  display: flex;
-  flex-flow: column nowrap;
+  display: block;
   justify-content: center;
   align-items: center;
-  margin: 0 15px 30px;
-  padding: 10px 10px 25px 10px;
+  padding: 15px 15px 30px 15px;
   text-align: center;
   text-decoration: none;
   position:relative;
+}
+
+#search-container {
+ 
 }
 
 #address {
@@ -91,7 +93,7 @@ body {
 }
 
 #mapSearchBtn {
-  
+
 }
 
 #body-content-container {
