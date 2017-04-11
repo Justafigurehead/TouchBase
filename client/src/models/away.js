@@ -38,4 +38,4 @@ Away.prototype = {
 }
 
 module.exports = Away;
->>>>>>> 78c8277e0e1402864605b8a760a9deb34a682bbf
+
