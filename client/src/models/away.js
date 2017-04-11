@@ -25,10 +25,6 @@ Away.prototype = {
       console.log(countryInfo);
       console.log(away);
     });
-    
-
-  
-    
   },
 
   createCountriesArray: function(results){
@@ -36,9 +32,7 @@ Away.prototype = {
     for(var results of results){
       var name = result.name;
       countries.push(name);
-
-    }
-
+    };
     return countries;
   }
 
