@@ -31,7 +31,7 @@ UI.prototype = {
       var date = new Date();
       var time = date.toLocaleTimeString();
       var YMD = date.toLocaleDateString('en-GB');
-      var prettyDate = YMD + " " + time ;
+      var prettyDate = YMD + " at " + time ;
       console.log(prettyDate);
       return prettyDate;
     }

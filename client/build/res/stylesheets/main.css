@@ -164,27 +164,21 @@ input {
   width: 90%;
   height: auto;
   min-height: 250px;
+  margin: auto;
   margin-top: 100px;
-  margin-left: 5%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-}
-
-#all-entries div {
-  flex: 1;
+  justify-content: space-between;
   flex-grow: 1;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .entry-content-container {
-  width: 45%;
-  min-width:250px;
-  height: 75%;
-  background-color: red;
-  padding: 5%;
+  width: 255px;
+  height: 255px;
+  background: url('../img/seamless_paper_texture.png');
+  padding: 2%;
+  margin-left: -1%;
+  margin-bottom: 5%;
 }
 
 .entry-content-container ul {
