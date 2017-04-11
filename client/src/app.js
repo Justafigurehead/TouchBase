@@ -17,12 +17,12 @@ var app = function(){
       journalUI.showAllEntries();
       break;
     case '/':
-    ui.createForm();
-    weatherUI.showAllWeather();
+      ui.createForm();
+      weatherUI.showAllWeather();
     break;
     case '/away':
-    away.makeRequest();
-    awayUI.showCountries();
+      away.makeRequest();
+      awayUI.showCountries();
     break;
   };
 }
