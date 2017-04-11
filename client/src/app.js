@@ -19,6 +19,7 @@ var app = function(){
     ui.createForm();
     weatherUI.showAllWeather();
     mapUI.displayMap();
+    mapUI.addMarker();
     break;
   };
 }

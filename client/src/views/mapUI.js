@@ -14,6 +14,8 @@ MapUI.prototype = {
     };
     var zoom = 10;
     var mainMap = new MapWrapper(container, center, zoom);
+
+    mainMap.addMarker(center);
   }
 };
 

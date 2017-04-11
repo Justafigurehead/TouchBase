@@ -9,7 +9,8 @@ MapWrapper.prototype = {
   addMarker: function(coords){
     var marker = new google.maps.Marker({
       position: coords,
-      map: this.googleMap
+      map: this.googleMap,
+      animation: google.maps.Animation.DROP
     });
   }
 
