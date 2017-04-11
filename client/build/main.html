@@ -7,7 +7,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Rubik" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Domine|Merriweather" rel="stylesheet">
-  <!-- CSS/Scrips -->
+  <!-- CSS/Scripts -->
   <link rel="stylesheet" type="text/css" href="./res/stylesheets/main.css">
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="bundle.js"></script>
@@ -30,15 +30,20 @@
       <div class="content-container-row">
         <div id='entryForm'></div>
         <div id='weatherInfo'></div>
-        <div id='home-map'></div>
+        <div id="map-container">
+          <div id="home-map"></div>
+          <div id="search-container">
+            <input type="text" id="address" placeholder="Enter your hometown..." /> 
+            <button id='mapSearchBtn'>Submit</button>
+          </div>
+        </div>
       </div>
       <div class="content-container-row">
         <h1>Hello World!</h1>
       </div>
     </div>
   </div>
-  <input type="text" id="address" /> 
-  <button id='mapSearchBtn'>Submit</button>
+
 
 </body>
 </html>
