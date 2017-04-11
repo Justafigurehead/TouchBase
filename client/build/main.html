@@ -3,10 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>TouchBase</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Domine|Merriweather" rel="stylesheet">
+  <!-- CSS/Scrips -->
+  <link rel="stylesheet" type="text/css" href="./res/stylesheets/main.css">
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="bundle.js"></script>
-</head>
-<body>
   
-<div id='entryForm'></div>
+</head>
+  <div id="nav-container">
+    <nav id="main-nav">
+        <img src="http://placehold.it/200x50" id="touchbase-logo-small" />
+
+        <div id="nav-link">
+          <a href="/">Home</a> 
+          <a href="/away" />Away</a>
+        </div>
+    </nav>
+  </div>
+<body>
+
+  <div id="body-content-container">
+    <div id="flexbox">
+      <div class="content-container-row">
+        <div id='entryForm'></div>
+        <div id='weatherInfo'></div>
+        <div id='home-map'></div>
+      </div>
+      <div class="content-container-row">
+        <h1>Hello World!</h1>
+      </div>
+    </div>
+  </div>
+  <input type="text" id="address" /> 
+  <button id='mapSearchBtn'>Submit</button>
+
 </body>
 </html>
