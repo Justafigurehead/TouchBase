@@ -109,15 +109,15 @@ body {
 /*h1 text and image*/
 
 .text-image h1 {
-  display: flex;
-  justify-content: center;
   font-size: 50px;
   color: white;
+  text-align: center;
 }
 
-.text-image img{
+.text-image h1 img{
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 
 #flexbox {
