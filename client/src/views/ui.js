@@ -11,11 +11,15 @@ UI.prototype = {
     var titleInput = document.createElement('input');
     titleInput.setAttribute("name", "title");
     titleInput.setAttribute("id", "title");
+    titleInput.setAttribute("placeholder", "Dear Diary...");
+    titleInput.setAttribute("maxlength", "20");
     form.appendChild(titleInput);
 
-    var entryTextInput = document.createElement('input');
-    entryTextInput.setAttribute("name", "entry_text");
-    entryTextInput.setAttribute("id", "entry_text");
+    var entryTextInput = document.createElement('textarea');
+    entryTextInput.setAttribute("name", "entry-text");
+    entryTextInput.setAttribute("id", "entry-text");
+    entryTextInput.setAttribute("placeholder", "Write about your day...")
+    entryTextInput.setAttribute("maxlength", "450");
     form.appendChild(entryTextInput);
 
     var button = document.createElement("button");
