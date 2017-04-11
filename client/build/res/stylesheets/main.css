@@ -71,6 +71,7 @@ body {
 #home-map {
   width: 300px;
   height: 300px;
+  border: 1px solid;
 }
 
 #map-container {
@@ -82,10 +83,11 @@ body {
   text-align: center;
   text-decoration: none;
   position:relative;
+  border: 1px solid;
 }
 
 #search-container {
- 
+ padding: 15px 10px 15px 10px;
 }
 
 #address {
