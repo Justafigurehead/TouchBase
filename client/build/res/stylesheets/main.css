@@ -12,6 +12,7 @@ html, body {
 body {
   background: url('../img/ryan-johnston-124209.jpg');
   background-size: cover;
+  margin: 0px;
 }
 
 #nav-container:after {
@@ -65,20 +66,30 @@ body {
 
 /* boxes */
 
-#entryForm {
-  margin-top: 10%;
-  margin-left: 10%;
-}
-
 #home-map {
   width: 300px;
   height: 300px;
 }
 
-#content-container {
+#body-content-container {
+  width: 100%;
+  margin: 5% 0%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+#flexbox {
   width: 90%;
-  margin-top: 5%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+#flexbox .content-container-row {
+  display: flex;
+}
+
+#flexbox .content-container-row div {
+  flex: 1;
+  justify-content: center;
 }
