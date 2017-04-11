@@ -1,7 +1,7 @@
 var UI = require('./views/ui');
 var JournalUI = require('./views/journalUI');
 var WeatherUI = require('./views/weatherUI');
-var AwayUI = require('./views/awayUi');
+var AwayUI = require('./views/awayUI');
 var Away = require('./models/away');
 
 var app = function(){

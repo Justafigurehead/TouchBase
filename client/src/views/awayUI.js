@@ -41,9 +41,7 @@ AwayUI.prototype = {
   },
   showCountries:function(){   
     var away = new Away();
-    away.all(function(result){
-      this.render(result);
-    })
+    away.all(this.render);
   }
 }
 
