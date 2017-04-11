@@ -67,8 +67,9 @@ body {
 /* boxes */
 
 #home-map {
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
+  border-radius: 20px;
 }
 
 #body-content-container {
@@ -92,4 +93,8 @@ body {
 #flexbox .content-container-row div {
   flex: 1;
   justify-content: center;
+}
+
+#map-container {
+
 }
