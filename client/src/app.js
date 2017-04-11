@@ -3,6 +3,7 @@ var JournalUI = require('./views/journalUI');
 var WeatherUI = require('./views/weatherUI');
 var MapUI = require('./views/MapUI');
 
+
 var app = function(){
   console.log(window.location.pathname);
   var ui = new UI();
@@ -19,7 +20,6 @@ var app = function(){
     ui.createForm();
     weatherUI.showAllWeather();
     mapUI.displayMap();
-    mapUI.addMarker();
     break;
   };
 }

@@ -8,11 +8,13 @@ GeoCoder.prototype = {
     var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address;
     var geoCoderThis = this;
 
-    makeRequest(url, function(){
+    this.makeRequest(url, function(){
       var resultsObj = JSON.parse(this.responseText);
 
       var coords = resultsObj.results[0].geometry.location;
       geoCoderThis.mapWrapper.googleMap.setCenter(coords);
+      console.log(coords);
+      geoCoderThis.mapWrapper.addMarker(coords);
     });
   }, 
   makeRequest: function(url, callback){
