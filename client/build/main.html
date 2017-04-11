@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>TouchBase</title>
   <link rel="stylesheet" type="text/css" href="./res/stylesheets/main.css">
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="bundle.js"></script>
 </head>
   <div id="nav-container">
@@ -11,15 +12,27 @@
         <img src="http://placehold.it/200x50" id="touchbase-logo-small" />
 
         <div id="nav-link">
-          <a href="/about">About TouchBase</a> 
-          <a href="/" />Away</a>
+          <a href="/">Home</a> 
+          <a href="/away" />Away</a>
         </div>
     </nav>
   </div>
 <body>
 
-<div id='entryForm'></div>
-<div id='weatherInfo'></div>
+  <div id="body-content-container">
+    <div id="flexbox">
+      <div class="content-container-row">
+        <div id='entryForm'></div>
+        <div id='weatherInfo'></div>
+        <div id='home-map'></div>
+      </div>
+      <div class="content-container-row">
+        <h1>Hello World!</h1>
+      </div>
+    </div>
+  </div>
+  <input type="text" id="address" /> 
+  <button id='mapSearchBtn'>Submit</button>
 
 </body>
 </html>

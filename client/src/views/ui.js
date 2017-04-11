@@ -12,10 +12,6 @@ UI.prototype = {
     titleInput.setAttribute("name", "title");
     form.appendChild(titleInput);
 
-    // var dateInput = document.createElement('input');
-    // dateInput.setAttribute("name", "date");
-    // form.appendChild(dateInput);
-
     var entryTextInput = document.createElement('input');
     entryTextInput.setAttribute("name", "entry_text");
     form.appendChild(entryTextInput);
