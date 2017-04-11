@@ -10,11 +10,14 @@ Away.prototype = {
     request.onload = callback;
     request.send();
   },
-  all:function (callback) {
-    this.makeRequest("https://restcountries.eu/rest/v2/all",function(){
+  all:function (selected, callback) {
+    var url = "https://restcountries.eu/rest/v2/" + selected;
+
+    this.makeRequest(url,function(){
       if(this.status !== 200) return;
       var jsonString = this.responseText; 
       var results = JSON.parse(jsonString);
+      var countryInfo = results[0];
       var away = away.prototype.createCountriesArray(results);
       callback(away);
     });
