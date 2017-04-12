@@ -29,10 +29,7 @@ MapUI.prototype = {
       console.log('clicked');
      handleBtnClick(mainMap);
     };
-
   }
-
- 
 };
 
 module.exports = MapUI;
