@@ -1,6 +1,4 @@
-/* TouchBase v.1.0 
-  
-*/
+/* TouchBase v.1.0 */
 
 html, body {
   overflow: hidden;
@@ -9,24 +7,22 @@ html, body {
 }
 
 /* Body Background pattern from Subtle Patterns */
+
 body {
   background: url('../img/ryan-johnston-124209.jpg');
   background-size: cover;
   margin: 0px;
 }
 
-#nav-container:after {
-    content: '';
-     position: absolute;
+#nav-container {
+     position: fixed;
      top: 0;
      left: 0;
      width: 100%;
      height: 12%;
-     background: #222;
-     filter: alpha(opacity= 50);
-     opacity: .6;
-     z-index:-1;
+     background: url('../img/black-transparent-bg.png');
 }
+
 
 /*nav logo*/
 #touchbase-logo-small {
@@ -103,12 +99,15 @@ body {
   font-size: 75px;
   color: white;
   text-align: center;
- font-family: "domine";
+ font-family: "roboto";
+ text-decoration: underline;
+
 }
 
 .text-image h1 img{
-  width: 125px;
-  height: 125px;
+  padding-top: 10px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
 }
 
@@ -148,7 +147,7 @@ input {
 
 #title {
   width: 80%;
-  font-family:'Domine';
+  font-family:'Lora';
   font-size:25px;
   outline: none;
 }
@@ -156,12 +155,13 @@ input {
 #entryText{
   width:100%;
   align-self: center;
-  background-color: mistyrose;
+  background-color: #DFCCCC;
   min-height: 200px;
   outline: none;
   resize: none;
   font-size:13px;
-  font-family: 'Domine';
+  color: black;
+  font-family: 'Lora';
 }
 
 /* Weather related content */
