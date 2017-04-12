@@ -27,7 +27,8 @@ body {
 
 /*nav logo*/
 #touchbase-logo-small {
-  padding-top:1.25%;
+  width: 16%;
+  padding-top:1%;
   margin-left: 2%;
 }
 
