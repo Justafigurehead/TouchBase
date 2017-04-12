@@ -1,6 +1,8 @@
 var UI = require('./views/ui');
 var JournalUI = require('./views/journalUI');
 var WeatherUI = require('./views/weatherUI');
+var AwayUI = require('./views/awayUI');
+var Away = require('./models/away');
 var MapUI = require('./views/mapUI');
 
 
@@ -9,6 +11,7 @@ var app = function(){
   var ui = new UI();
   var journalUI = new JournalUI();
   var weatherUI = new WeatherUI();
+  var awayUI = new AwayUI();
   var mapUI = new MapUI();
 
 
@@ -17,9 +20,11 @@ var app = function(){
       journalUI.showAllEntries();
       break;
     case '/':
-    ui.createForm();
-    weatherUI.showAllWeather();
-    mapUI.displayMap();
+      ui.createForm();
+      weatherUI.showAllWeather();
+    break;
+    case '/away':
+      awayUI.showCountries();
     break;
   };
 }

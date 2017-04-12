@@ -63,6 +63,14 @@ body {
 
 /* boxes */
 
+
+#entryForm {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+/* away */
+
 /*map styling*/
 
 #home-map {

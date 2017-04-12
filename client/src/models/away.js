@@ -31,6 +31,22 @@ Away.prototype = {
         this.makeRequest(url, callback, this.requestDone);
 
     },
+    
+    gotCountryInfo: function(response, callback) {
+      console.log("gotCountryInfo callback fired");
+      console.log("Response status: " + response.status);
+      if (response.status !== 200) return;
+      console.log("Status was 200");
+      var jsonString = response.responseText;
+      callback(jsonString);
+    },
+    
+    getCountry: function(country, callback) {
+      console.log("The callback: " + callback);
+      var url = "https://restcountries.eu/rest/v2/name/" + country;
+      this.makeRequest(url, callback, this.gotCountryInfo);
+    },
+    
   createCountriesArray: function(results){
     var countries = [];
     for(var results of results){
@@ -41,4 +57,3 @@ Away.prototype = {
   }
 }
 module.exports = Away;
-
