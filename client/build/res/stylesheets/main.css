@@ -59,17 +59,6 @@ body {
   text-decoration: underline;
   transition: all 0.6s ease-in-out;
 }
-/*Buttons*/
-
-/* boxes */
-
-
-#entryForm {
-  margin-top: 10%;
-  margin-left: 10%;
-}
-
-/* away */
 
 /*map styling*/
 
@@ -163,9 +152,9 @@ input {
 
 #entryText{
   width:100%;
-  align-self: center;
   background-color: #DFCCCC;
   min-height: 200px;
+  margin: auto;
   outline: none;
   resize: none;
   font-size:13px;

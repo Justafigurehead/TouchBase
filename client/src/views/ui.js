@@ -11,7 +11,7 @@ UI.prototype = {
     var titleInput = document.createElement('input');
     titleInput.setAttribute("name", "title");
     titleInput.setAttribute("id", "title");
-    titleInput.setAttribute("placeholder", "Dear Diary...");
+    titleInput.setAttribute("placeholder", "Enter Title...");
     titleInput.setAttribute("maxlength", "20");
     form.appendChild(titleInput);
 
@@ -44,7 +44,8 @@ UI.prototype = {
         date: dateNow(),
         entry_text: e.target.entryText.value
       }
-      
+      titleInput.value = "Title";
+      entryTextInput.value = "Write a new entry!"
       var entries = new Entries();
       entries.add(newEntry, function(data){
         console.log(data);

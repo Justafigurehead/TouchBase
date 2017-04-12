@@ -16,10 +16,10 @@ WeatherUI.prototype = {
     liName.innerHTML = "<p> City Name: " + weather.name + "</p>";
 
     var liTemp = document.createElement('li');
-    liTemp.innerHTML = "<p> Temperature: " + weather.main.temp + "</p>"
+    liTemp.innerHTML = "<p> Temperature: " + weather.main.temp + " &#8451</p>"
 
     var liWeatherDescription = document.createElement('li');
-    liWeatherDescription.innerHTML = "<p>Description : " + weather.weather[0].description + "</p>"
+    liWeatherDescription.innerHTML = "<p>Description: " + weather.weather[0].description + "</p>"
 
     var imgIcon = document.createElement('img');
     imgIcon.src = 'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png';

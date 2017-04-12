@@ -21,6 +21,7 @@ var app = function(){
       break;
     case '/':
       ui.createForm();
+      mapUI.displayMap();
       weatherUI.showAllWeather();
     break;
     case '/away':

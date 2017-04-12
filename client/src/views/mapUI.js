@@ -30,6 +30,8 @@ MapUI.prototype = {
      handleBtnClick(mainMap);
     };
   }
+
+ 
 };
 
 module.exports = MapUI;
