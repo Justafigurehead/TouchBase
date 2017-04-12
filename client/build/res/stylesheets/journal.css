@@ -22,7 +22,6 @@ body {
      width: 100%;
      height: 12%;
      background: url('../img/black-transparent-bg.png');
-    
 }
 
 /*nav logo*/
@@ -62,7 +61,7 @@ body {
 /* Journal - all entries */
 
 #all-entries {
-  margin: 40px auto;
+  margin: 100px auto;
   padding: 0;
   width: 90%;
   display: flex;
