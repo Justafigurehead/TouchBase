@@ -16,8 +16,8 @@ UI.prototype = {
     form.appendChild(titleInput);
 
     var entryTextInput = document.createElement('textarea');
-    entryTextInput.setAttribute("name", "entry-text");
-    entryTextInput.setAttribute("id", "entry-text");
+    entryTextInput.setAttribute("name", "entryText");
+    entryTextInput.setAttribute("id", "entryText");
     entryTextInput.setAttribute("placeholder", "Write about your day...")
     entryTextInput.setAttribute("maxlength", "450");
     form.appendChild(entryTextInput);
@@ -31,7 +31,7 @@ UI.prototype = {
       var date = new Date();
       var time = date.toLocaleTimeString();
       var YMD = date.toLocaleDateString('en-GB');
-      var prettyDate = YMD + " " + time ;
+      var prettyDate = YMD + " at " + time ;
       console.log(prettyDate);
       return prettyDate;
     }
@@ -42,7 +42,7 @@ UI.prototype = {
       var newEntry = {
         title: e.target.title.value,
         date: dateNow(),
-        entry_text: e.target.entry_text.value
+        entry_text: e.target.entryText.value
       }
       
       var entries = new Entries();
