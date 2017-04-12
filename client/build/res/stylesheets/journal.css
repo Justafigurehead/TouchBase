@@ -1,0 +1,14 @@
+/* Journal */
+
+html, body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Body Background pattern from Subtle Patterns */
+body {
+  background: url('../img/ryan-johnston-124209.jpg');
+  background-size: cover;
+  margin: 0px;
+}
