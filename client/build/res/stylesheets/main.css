@@ -1,0 +1,175 @@
+/* TouchBase v.1.0 
+  
+*/
+
+html, body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Body Background pattern from Subtle Patterns */
+body {
+  background: url('../img/ryan-johnston-124209.jpg');
+  background-size: cover;
+  margin: 0px;
+}
+
+#nav-container:after {
+    content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 12%;
+     background: #222;
+     filter: alpha(opacity= 50);
+     opacity: .6;
+     z-index:-1;
+}
+
+/*nav logo*/
+#touchbase-logo-small {
+  padding-top:1.25%;
+  margin-left: 2%;
+
+}
+
+
+/* Nav links container for positioning*/
+
+#nav-link {
+  margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -3.0%;
+  margin-right:60px;
+  opacity:0.9;
+}
+
+
+#nav-link a:link, a:active, a:visited {
+  text-decoration: none;
+  color: #FFF;
+  font-family: 'roboto condensed';
+  font-size:1.2em;
+  text-transform: uppercase;
+  margin-right:30px;
+  letter-spacing: 1px;
+}
+
+#nav-link a:hover {
+  color: mistyrose;
+  text-decoration: underline;
+  transition: all 0.6s ease-in-out;
+}
+/*Buttons*/
+
+/* boxes */
+
+/*map styling*/
+
+#home-map {
+  width: 100%;
+  height: 300px;
+}
+
+#map-container {
+  background: white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 30px 15px;
+  text-align: center;
+  text-decoration: none;
+  position:relative;
+  box-shadow: 10px 10px 8px -6px #222;
+  
+}
+
+#search-container {
+ padding: 15px 10px 15px 10px;
+}
+
+#address {
+ 
+}
+
+#mapSearchBtn {
+
+}
+
+#body-content-container {
+  width: 100%;
+  margin: 5% 0%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+#flexbox {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#flexbox .content-container-row {
+  display: flex;
+  justify-content: center;
+}
+
+#flexbox .content-container-row div {
+  flex: 1;
+  justify-content: center;
+}
+
+/* INPUT BOXES */
+.box {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height:90%;
+  padding:10px;
+  padding-right:17px;
+  background-color: #FFF;
+  box-shadow: 10px 10px 8px -6px #222;
+}
+
+input {
+  appearance: none;
+  border: none;
+}
+
+#title {
+  width: 80%;
+  font-family:'Domine';
+  font-size:25px;
+  outline: none;
+}
+
+#entry-text{
+  width:100%;
+  align-self: center;
+  background-color: mistyrose;
+  min-height: 200px;
+  outline: none;
+  resize: none;
+  font-size:13px;
+  font-family: 'Domine';
+}
+
+#weatherInfo{
+
+  align-self: top;
+  background-color: #FFF;
+  height: 80%;
+  font-size:13px;
+  font-family: 'Domine';
+}
+
+li{
+  width:100%;
+  margin-left: 60%;
+  font-family: 'roboto condensed';
+}
+

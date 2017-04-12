@@ -3,7 +3,6 @@ var Key = require('../../../key');
 var Weather = function() {
 
    this.weatherKey = new Key();
-
 };
 
 Weather.prototype = {
@@ -21,9 +20,8 @@ Weather.prototype = {
         return;
       var jsonString = this.responseText;
       var results = JSON.parse(jsonString);
+      console.log(results);
       callback(results);
-      // var weather = Weather.prototype.populateWeather(results);
-      // callback(weather);
     });
   }
 }
