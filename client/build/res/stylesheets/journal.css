@@ -1,14 +1,25 @@
-/* Journal */
+/* Journal - all entries */
 
-html, body {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+#all-entries {
+  margin: 70px auto;
+  padding: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 
-/* Body Background pattern from Subtle Patterns */
-body {
-  background: url('../img/ryan-johnston-124209.jpg');
-  background-size: cover;
-  margin: 0px;
+.entry-container {
+  background: red;
+  padding: 20px 0;
+  display:flex;
+  justify-content: center;
+}
+
+.entry-list {
+  border: 1px solid black;
+  width: 300px;
+  height: 250px;
+  justify-content: space-around;
 }
