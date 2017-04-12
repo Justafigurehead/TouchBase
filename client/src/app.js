@@ -1,7 +1,7 @@
 var UI = require('./views/ui');
 var JournalUI = require('./views/journalUI');
 var WeatherUI = require('./views/weatherUI');
-var MapUI = require('./views/MapUI');
+var MapUI = require('./views/mapUI');
 
 
 var app = function(){
