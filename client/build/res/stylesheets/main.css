@@ -158,3 +158,18 @@ input {
   font-family: 'Domine';
 }
 
+#weatherInfo{
+
+  align-self: top;
+  background-color: #FFF;
+  height: 80%;
+  font-size:13px;
+  font-family: 'Domine';
+}
+
+li{
+  width:100%;
+  margin-left: 60%;
+  font-family: 'roboto condensed';
+}
+
