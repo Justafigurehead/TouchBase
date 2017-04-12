@@ -44,8 +44,10 @@ UI.prototype = {
         date: dateNow(),
         entry_text: e.target.entryText.value
       }
-      titleInput.value = "Title";
-      entryTextInput.value = "Write a new entry!"
+      titleInput.value = "";
+      entryTextInput.value = "";
+      titleInput.setAttribute("placeholder", "New title");
+      entryTextInput.setAttribute("placeholder", "Write a new entry!");
       var entries = new Entries();
       entries.add(newEntry, function(data){
         console.log(data);

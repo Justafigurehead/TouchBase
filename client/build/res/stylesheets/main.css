@@ -56,7 +56,7 @@ body {
 }
 
 #nav-link a:hover {
-  color: mistyrose;
+  color: #A2E5D2;
   text-decoration: underline;
   transition: all 0.6s ease-in-out;
 }
@@ -154,7 +154,7 @@ input {
 
 #entryText{
   width:100%;
-  background-color: #DFCCCC;
+  background-color: #cbe5de;
   min-height: 280px;
   outline: none;
   resize: none;
@@ -169,7 +169,7 @@ input {
   margin: auto;
   list-style-type: none;
   justify-content: space-between;
-  color: white;
+  color: #222;
   font-size: 14px;
   font-family: 'roboto';
 }
@@ -179,7 +179,7 @@ input {
   text-transform: uppercase;
   text-decoration: underline;
   text-align: center;
-  color: white;
+  color: #222;
   font-family: 'roboto';
   font-size: 25px;
   letter-spacing: 1px;

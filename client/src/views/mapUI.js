@@ -17,8 +17,8 @@ MapUI.prototype = {
   displayMap: function() {
     var container = document.getElementById('home-map');
     var center = {
-      lat: 55.8,
-      lng: -4
+      lat: 55.8642,
+      lng: -4.2518
     };
     var zoom = 10;
     var mainMap = new MapWrapper(container, center, zoom);

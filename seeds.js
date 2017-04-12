@@ -12,3 +12,5 @@ db.entries.insert([
     entry_text: "I went for a nice walk"
   }
 ]);
+
+db.dropDatabase();
