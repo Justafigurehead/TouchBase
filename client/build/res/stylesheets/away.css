@@ -1,19 +1,22 @@
 body{
   background-image: url('../img/woodrow-walden-39640.jpg');
-  background-size: cover;
+  background-size: 85em;
 
 }
 
 #awayUl{
-  background-color: #c4b27e;
+  background-color: #C6E5D9;
   opacity: 0.6;
   padding: 10px;
-  width: 25%;
+  margin-left: 20px;
+  width: 30%;
   box-shadow: 10px 10px 8px -6px #222;
 }
 
 #away-dropdown{
+  margin-left:20px;
   margin-top: 5em;
+  background: #C6E5D9;
 }
 
 #nav-container:after {
