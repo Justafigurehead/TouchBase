@@ -1,5 +1,3 @@
-
-
 use travel_journal;
 
 db.entries.insert([
@@ -11,7 +9,6 @@ db.entries.insert([
   {
     date: "08/04/2017",
     title: "Day Two",
-    entry_text: "Today I will be visiting..."
+    entry_text: "I went for a nice walk"
   }
 ]);
-// db.dropDatabase();

@@ -10,9 +10,9 @@ html, body {
 
 /* Body Background pattern from Subtle Patterns */
 body {
-  margin:0px;
   background: url('../img/ryan-johnston-124209.jpg');
   background-size: cover;
+  margin: 0px;
 }
 
 #nav-container:after {
@@ -32,7 +32,6 @@ body {
 #touchbase-logo-small {
   padding-top:1.25%;
   margin-left: 2%;
-
 }
 
 
@@ -51,7 +50,7 @@ body {
 #nav-link a:link, a:active, a:visited {
   text-decoration: none;
   color: #FFF;
-  font-family: sans-serif;
+  font-family: 'roboto condensed';
   font-size:1.2em;
   text-transform: uppercase;
   margin-right:30px;
@@ -59,12 +58,14 @@ body {
 }
 
 #nav-link a:hover {
-  color: red;
+  color: mistyrose;
+  text-decoration: underline;
   transition: all 0.6s ease-in-out;
 }
 /*Buttons*/
 
 /* boxes */
+
 
 #entryForm {
   margin-top: 10%;
@@ -73,3 +74,147 @@ body {
 
 /* away */
 
+/*map styling*/
+
+#home-map {
+  width: 100%;
+  height: 300px;
+}
+
+#map-container {
+  background: white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 30px 15px;
+  text-align: center;
+  text-decoration: none;
+  position:relative;
+  box-shadow: 10px 10px 8px -6px #222;
+  
+}
+
+#search-container {
+ padding: 15px 10px 15px 10px;
+}
+
+#body-content-container {
+  width: 100%;
+  margin: 5% 0%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+/*h1 text and image*/
+
+.text-image h1 {
+  font-size: 75px;
+  color: white;
+  text-align: center;
+ font-family: "domine";
+}
+
+.text-image h1 img{
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+#flexbox {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#flexbox .content-container-row {
+  display: flex;
+  justify-content: center;
+}
+
+#flexbox .content-container-row div {
+  flex: 1;
+  justify-content: center;
+}
+
+/* INPUT BOXES */
+.box {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height:90%;
+  padding:10px;
+  padding-right:17px;
+  background-color: #FFF;
+  box-shadow: 10px 10px 8px -6px #222;
+}
+
+input {
+  appearance: none;
+  border: none;
+}
+
+#title {
+  width: 80%;
+  font-family:'Domine';
+  font-size:25px;
+  outline: none;
+}
+
+#entryText{
+  width:100%;
+  align-self: center;
+  background-color: mistyrose;
+  min-height: 200px;
+  outline: none;
+  resize: none;
+  font-size:13px;
+  font-family: 'Domine';
+}
+
+/* Weather related content */
+#weatherInfo{
+
+  align-self: top;
+  background-color: #FFF;
+  height: 80%;
+  font-size:13px;
+  font-family: 'Domine';
+}
+
+li{
+  width:100%;
+  margin-left: 60%;
+  font-family: 'roboto condensed';
+}
+
+/* Journal - all entries */
+
+#all-entries {
+  background: white;
+  width: 90%;
+  height: auto;
+  min-height: 250px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.entry-content-container {
+  width: 255px;
+  height: 255px;
+  background: url('../img/seamless_paper_texture.png');
+  padding: 2%;
+  margin-left: -1%;
+  margin-bottom: 5%;
+}
+
+.entry-content-container ul {
+  list-style-type: none;
+  margin: 0px;
+  font-family: 'domine';
+  font-size: 14px;
+}

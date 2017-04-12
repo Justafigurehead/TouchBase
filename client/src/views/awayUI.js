@@ -1,5 +1,5 @@
 var Away = require('../models/away');
-var util = require('util')
+var util = require('util');
 
 var AwayUI = function() {
 };
@@ -65,6 +65,7 @@ AwayUI.prototype = {
         var away = new Away();
         away.all(this.render);
     }
+
 }
 
 module.exports = AwayUI;
