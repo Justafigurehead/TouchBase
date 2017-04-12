@@ -3,23 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>TouchBase</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Domine|Merriweather" rel="stylesheet">
+  <!-- CSS/Scripts -->
   <link rel="stylesheet" type="text/css" href="./res/stylesheets/main.css">
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="bundle.js"></script>
+  
 </head>
   <div id="nav-container">
     <nav id="main-nav">
         <img src="http://placehold.it/200x50" id="touchbase-logo-small" />
 
         <div id="nav-link">
-          <a href="/about">About TouchBase</a> 
-          <a href="/" />Away</a>
+          <a href="/">Home</a> 
+          <a href="/away" />Away</a>
         </div>
     </nav>
   </div>
 <body>
 
-<div id='entryForm'></div>
-<div id='weatherInfo'></div>
+  <div id="body-content-container">
+    <div id="flexbox">
+      <div class="content-container-row">
+        <div id="entryForm-container">
+          <div class="box">
+            <div id='entryForm'></div>
+          </div>
+        </div>
+        <div id='weatherInfo'></div>
+        <div id="map-container">
+          <div id="home-map"></div>
+          <div id="search-container">
+            <input type="text" id="address" placeholder="Enter your hometown..." /> 
+            <button id='mapSearchBtn'>Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="content-container-row">
+          <div class="text-image">
+            
+            <h1>Hello Jessie!<img src="./res/img/jessie.png"/></h1>
+          
+          </div>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 </html>

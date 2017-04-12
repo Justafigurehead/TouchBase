@@ -57,4 +57,3 @@ Away.prototype = {
   }
 }
 module.exports = Away;
-

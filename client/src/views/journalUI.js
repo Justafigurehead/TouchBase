@@ -12,6 +12,9 @@ JournalUI.prototype = {
       var div = document.createElement('div');
       div.setAttribute("id", "entry-" + id_number);
       id_number++;
+      div.setAttribute("class", "entry-container");
+      var contentDiv = document.createElement('div');
+      contentDiv.setAttribute("class", "entry-content-container");
 
       var ul = document.createElement('ul');
 
@@ -26,7 +29,8 @@ JournalUI.prototype = {
       ul.appendChild(liTitle);
       ul.appendChild(liDate);
       ul.appendChild(liEntryText);
-      div.appendChild(ul);
+      contentDiv.appendChild(ul);
+      div.appendChild(contentDiv);
       container.appendChild(div);
     }
   },

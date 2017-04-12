@@ -10,14 +10,16 @@ UI.prototype = {
 
     var titleInput = document.createElement('input');
     titleInput.setAttribute("name", "title");
+    titleInput.setAttribute("id", "title");
+    titleInput.setAttribute("placeholder", "Dear Diary...");
+    titleInput.setAttribute("maxlength", "20");
     form.appendChild(titleInput);
 
-    // var dateInput = document.createElement('input');
-    // dateInput.setAttribute("name", "date");
-    // form.appendChild(dateInput);
-
-    var entryTextInput = document.createElement('input');
-    entryTextInput.setAttribute("name", "entry_text");
+    var entryTextInput = document.createElement('textarea');
+    entryTextInput.setAttribute("name", "entryText");
+    entryTextInput.setAttribute("id", "entryText");
+    entryTextInput.setAttribute("placeholder", "Write about your day...")
+    entryTextInput.setAttribute("maxlength", "450");
     form.appendChild(entryTextInput);
 
     var button = document.createElement("button");
@@ -29,7 +31,7 @@ UI.prototype = {
       var date = new Date();
       var time = date.toLocaleTimeString();
       var YMD = date.toLocaleDateString('en-GB');
-      var prettyDate = YMD + " " + time ;
+      var prettyDate = YMD + " at " + time ;
       console.log(prettyDate);
       return prettyDate;
     }
@@ -40,7 +42,7 @@ UI.prototype = {
       var newEntry = {
         title: e.target.title.value,
         date: dateNow(),
-        entry_text: e.target.entry_text.value
+        entry_text: e.target.entryText.value
       }
       
       var entries = new Entries();

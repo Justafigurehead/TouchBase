@@ -3,6 +3,8 @@ var JournalUI = require('./views/journalUI');
 var WeatherUI = require('./views/weatherUI');
 var AwayUI = require('./views/awayUI');
 var Away = require('./models/away');
+var MapUI = require('./views/mapUI');
+
 
 var app = function(){
   console.log(window.location.pathname);
@@ -10,6 +12,7 @@ var app = function(){
   var journalUI = new JournalUI();
   var weatherUI = new WeatherUI();
   var awayUI = new AwayUI();
+  var mapUI = new MapUI();
 
 
   switch(window.location.pathname){
