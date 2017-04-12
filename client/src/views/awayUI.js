@@ -39,13 +39,18 @@ AwayUI.prototype = {
                     console.log("results: " + util.inspect(results));
                     var div = document.getElementById('away');
                     var ul = document.createElement('ul');
+                    ul.setAttribute("id", "awayUl");
                     var liName = document.createElement('li');
+                    liName.setAttribute("id", "liName");
                     liName.innerText = results[0].name;
                     var liCap = document.createElement('li');
+                    liCap.setAttribute("id", "liCap");
                     liCap.innerText = results[0].capital;
                     var liCurr = document.createElement('li');
+                    liCurr.setAttribute("id", "liCurr");
                     liCurr.innerText = results[0].currencies[0].name;
                     var liLang = document.createElement('li');
+                    liLang.setAttribute("id", "liLang");
                     liLang.innerText = results[0].languages[0].name;
                     ul.appendChild(liName);
                     ul.appendChild(liCap);
