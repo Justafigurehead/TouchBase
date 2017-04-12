@@ -38,6 +38,7 @@ AwayUI.prototype = {
                     var results = JSON.parse(countryInfo);
                     console.log("results: " + util.inspect(results));
                     var div = document.getElementById('away');
+                    div.innerText = "";
                     var ul = document.createElement('ul');
                     var liName = document.createElement('li');
                     liName.innerText = results[0].name;
