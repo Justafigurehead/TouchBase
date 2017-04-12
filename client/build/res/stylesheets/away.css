@@ -5,8 +5,10 @@ body{
 }
 
 #awayUl{
-  background-color: #fff;
-  width: 10%;
+  background-color: #c4b27e;
+  opacity: 0.6;
+  padding: 10px;
+  width: 25%;
   box-shadow: 10px 10px 8px -6px #222;
 }
 
