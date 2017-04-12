@@ -7,31 +7,28 @@ var JournalUI = function(){
 JournalUI.prototype = {
   render: function(entries){
     var container = document.getElementById('all-entries');
-    var id_number = 0;
     for (var entry of entries){
-      var div = document.createElement('div');
-      div.setAttribute("id", "entry-" + id_number);
-      id_number++;
-      div.setAttribute("class", "entry-container");
+      var divContainer = document.createElement('div');
+      divContainer.setAttribute("class", "entry-container");
       var contentDiv = document.createElement('div');
-      contentDiv.setAttribute("class", "entry-content-container");
+      contentDiv.setAttribute("class", "entry-list");
 
-      var ul = document.createElement('ul');
 
-      var liTitle = document.createElement('li');
-      liTitle.innerHTML = "<h2>" + entry.title + "</h2>";
-      var liDate = document.createElement('li');
-      liDate.innerHTML = "<em>" + entry.date + "</em>";
+      var divTitle = document.createElement('div');
+      divTitle.innerHTML = "<h2>" + entry.title + "</h2>";
+      divTitle.setAttribute("class", "entry-title");
+      var divDate = document.createElement('div');
+      divDate.innerHTML = "<em>" + entry.date + "</em>";
+      divDate.setAttribute("class", "entry-date");
+      var divEntryText = document.createElement('div');
+      divEntryText.innerHTML = "<p>" + entry.entry_text + "</p>";
+      divEntryText.setAttribute("class", "entry-entryText")
 
-      var liEntryText = document.createElement('li');
-      liEntryText.innerHTML = "<p>" + entry.entry_text + "</p>";
-
-      ul.appendChild(liTitle);
-      ul.appendChild(liDate);
-      ul.appendChild(liEntryText);
-      contentDiv.appendChild(ul);
-      div.appendChild(contentDiv);
-      container.appendChild(div);
+      contentDiv.appendChild(divTitle);
+      contentDiv.appendChild(divDate);
+      contentDiv.appendChild(divEntryText);
+      divContainer.appendChild(contentDiv);
+      container.appendChild(divContainer);
     }
   },
   showAllEntries:  function(){
