@@ -133,8 +133,8 @@ body {
 .box {
   display: flex;
   align-items: center;
-  width: 70%;
-  height:90%;
+  width: 100%;
+  height: 300px;
   padding:10px;
   padding-right:17px;
   background-color: #FFF;
@@ -166,20 +166,32 @@ input {
 }
 
 /* Weather related content */
-#weatherInfo{
 
-  align-self: top;
-  background-color: #FFF;
-  height: 80%;
-  font-size:13px;
-  font-family: 'Domine';
+#weather-container ul{
+  width: 60%;
+  margin: auto;
+  list-style-type: none;
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: 10px 10px 8px -6px #222;
 }
 
-#weatherInfo li{
-  width:100%;
-  margin-left: 60%;
-  font-family: 'roboto condensed';
+#weather-container h2 {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  background-color: white;
 }
+
+#weatherInfo {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
 
 
 
